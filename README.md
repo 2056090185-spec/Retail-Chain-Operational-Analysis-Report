@@ -21,7 +21,7 @@ Chuỗi cửa hàng tiện lợi 7-Eleven tại Khu Công nghệ cao có một t
 Điểm chung của các cửa hàng này này là có lượng khác hàng tiềm năng lớn, các quản lý cửa hàng/khu vực muốn theo dõi và tối ưu hiệu suất vận hành với 3 nhóm tác động sau:
 - **Peak Hour Optimization**: Tình trạng quá tải thường xuyên xảy ra vào giờ nghỉ trưa (12:00 - 12:30) khiến khách hàng phải xếp hàng dài, dẫn đến tỷ lệ rời bỏ (walk-outs) tăng cao. Trong khi đó, vào ca sáng (6:00 - 9:00), nhân viên mất nhiều thời gian tư vấn bán chéo (cross-sell) do chưa có các gói "Combo chiến lược" được đóng gói sẵn.			
 - **Inventory & Wastage Control**: Các mặt hàng Best-seller (như cà phê sữa đá, cơm nắm) thường xuyên "cháy hàng" ngay trong giờ cao điểm. Ngược lại, nhóm thực phẩm tươi sống có hạn sử dụng trong ngày (Shelf-life = 1 day) lại ghi nhận tỷ lệ hủy (Wastage Rate) cuối ngày ở mức đáng báo động.	
-- **Category Performance**: Diện tích kệ hàng có hạn nhưng việc phân bổ vị trí trưng bày chưa dựa trên dữ liệu hiệu suất ngành hàng. Các sản phẩm mang lại biên lợi nhuận cao (đặc biệt là Hàng nhãn riêng - Private Label) chưa được ưu tiên hiển thị đúng mức so với các sản phẩm thông thường.
+- **Category Performance**: Diện tích kệ hàng có hạn nhưng việc phân bổ vị trí trưng bày chưa dựa trên dữ liệu hiệu suất ngành hàng. Các sản phẩm mang lại doanh thu tốt (đặc biệt là Hàng nhãn riêng - Private Label) chưa được ưu tiên hiển thị đúng mức so với các sản phẩm thông thường.
 ## Nhiệm vụ:
 Xây dựng một hệ thống báo cáo khai thác trực tiếp từ dữ liệu giao dịch bán hàng. Mục tiêu là cung cấp một góc nhìn tổng quan về sức khỏe vận hành, giúp quản lý cửa hàng/khu vực trả lời được các câu hỏi:
 - Khung giờ nào cần tăng cường mật độ nhân viên để giảm tỷ lệ khách rời bỏ (walk-outs)?
