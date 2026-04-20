@@ -152,20 +152,57 @@ Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 ```
 ### 3.3. Tổng quan Dashboard & Phân tích chi tiết
 **Page 1 - Overview**
+- **Overview**: Nhìn tổng thể năm 2025, hệ thống ghi nhận sự tăng trưởng ổn định về quy mô khách hàng nhưng đang gặp thách thức trong việc tối ưu giá trị trên từng giỏ hàng.  
 
 ![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%201%20-%20Overview.png)
 
+- **Tends**:  
+▪️Phân tích xu hướng theo thời gian, doanh thu toàn chuỗi bùng nổ vào tháng 7 – thời điểm vàng của mùa sản xuất điểm cao – nhưng lại sụt giảm bất thường vào tháng 10, có thể đến từ sự thay đổi về quy mô nhân sự hoặc lịch trình làm việc tại các nhà máy lớn như Intel hay Samsung.  
+▪️Tỷ lệ hủy hàng (Wastage) duy trì ở mức 2% là một con số an toàn, nhưng cấu trúc nguyên nhân lại cho thấy sự bất ổn. Cụ thể, lỗi hàng hết hạn (Expired) chiếm tỷ trọng áp đảo, đặc biệt tăng vọt vào tháng 4 và tháng 5 dù đây không phải là các tháng doanh thu cao nhất. Đây là điểm bất thường rõ rệt, ám chỉ sự sai lệch trong công tác dự báo cầu và định mức nhập hàng đầu vào trong giai đoạn quý 2.
 
+- **Deep-dive**: Doanh thu tập trung gần như tuyệt đối vào khung giờ 7:00 - 12:00 sáng, với điểm tựa là nhóm sản phẩm Ready-to-eat (RTE) đóng góp tới 69M và Cà phê sữa đá. Tuy nhiên, sự phụ thuộc quá lớn vào một khung giờ và một nhóm sản phẩm RTE cũng tạo ra áp lực cho nhân sự trực ca sáng và rủi ro hủy hàng nếu không tiêu thụ hết trước cuối ngày.
+
+- **Action**:  
+**[1]** Đề xuất triển khai các gói Combo chiến lược (ví dụ: Cà phê + Bánh mì/Sandwich) tập trung vào khung giờ sáng để đẩy giá trị giỏ hàng lên mức mục tiêu 90K  
+**[2]** Về mặt vận hành, quản lý khu vực cần điều phối lại ca làm việc, dồn 80% nguồn lực phục vụ vào "điểm nghẽn" 6:00 - 9:00 sáng và thực hiện công tác chuẩn bị hàng (Pre-prep) cho các món Best-seller trước giờ mở cửa cao điểm.  
+**[3]** Cần điều chỉnh lại thuật toán đặt hàng cho nhóm RTE vào giai đoạn tháng 4 và tháng 10 để giảm thiểu tỷ lệ Expired.  
+**[4]** Chạy chương trình "Happy Hour" cho nhóm hàng RTE sẽ để giải phóng tồn kho, vừa bảo vệ biên lợi nhuận, vừa giảm thiểu rác thải thực phẩm.
+  
+#### 1. Cơ cấu danh mục & Quản trị chống đứt hàng (Assortment & OOS Management)
+- **Insight**: "Ready-to-eat" (69M) và "Coffee" (29M) là hai trụ cột doanh thu chính. Ở cấp độ SKU, "Cà Phê Sữa Đá" là sản phẩm dẫn đầu áp đảo (chiếm gần 30M)
+- **Action**: Ưu tiên 100% diện tích trung bày 
 
 **Page 2 - Basket & Operation Deep Dive**
+- **Overview**: Số liệu ghi nhận khung giờ cao điểm đóng góp tới 33.2% tổng doanh thu, với hiệu suất phục vụ cực cao đạt trung bình 343 giao dịch/giờ. Tuy nhiên, một chỉ số "đau lòng" xuất hiện: AOV giờ cao điểm (71.14K) thấp hơn đáng kể so với AOV trung bình cả ngày (82.18K). Khách hàng ghé cửa hàng vào giờ cao điểm chủ yếu là công nhân viên đang vội, họ mua nhanh – mua ít, dẫn đến việc chúng ta đang "bán sức" phục vụ số lượng lớn nhưng giá trị thu về trên mỗi khách lại chưa tối ưu.
 
 ![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%202%20-%20Basket%20%26%20Operation%20Deep%20Dive.png) 
 
+- **Tends**: Zoom in vào Basket Size Distribution, ghi nhận 71.12% khách hàng chỉ mua duy nhất 1 sản phẩm trong một đơn hàng, đây được xem là "nút thắt" khiến doanh thu không thể bùng nổ. Trong khi đó, nhóm khách hàng mua từ 4 món trở lên chỉ chiếm một tỷ trọng rất nhỏ nhưng lại đóng góp tới 42.56% tổng giá trị doanh thu. Xu hướng này cho thấy chúng ta đang bỏ lỡ cơ hội Cross-sell cực lớn ngay tại quầy kệ khi khách hàng đang trong trạng thái "vội vã".
+
+- **Deep-dive**:  
+▪️ Ma trận Cross-Sell chỉ ra Cà phê sữa đá là "mặt hàng mồi" (Anchor Product) xuất sắc nhất. Nó có xác suất đi kèm với Bánh bao nhân thịt (25.3%) và Bánh mì thịt nguội (24.4%) rất cao.  
+▪️Biểu đồ Top Combo Performance cho thấy sự kết hợp giữa Cà phê sữa đá + Sữa tươi Vinamilk đang dẫn đầu về cả doanh thu và số lượng đơn. Điều này khá thú vị, có thể khách hàng mua giúp đồng nghiệp hoặc đây là thói quen tiêu dùng "đồ uống kép" tại khu vực này.  
+▪️Khung giờ 7:00 - 9:00 sáng ghi nhận sự cộng hưởng tuyệt vời giữa Coffee (24%) và Ready-to-eat (21.2%). Đây vùng cần khai thác sâu.
+
+- **Action**:  
+**[1]** Kéo 10-15% lượng khách từ nhóm "1 item" sang nhóm "2 items". Đặt các kệ line-up ngay hàng chờ thanh toán với các sản phẩm dễ nhặt như sandwich, bánh ngọt đã được đóng gói sẵn.  
+**[2]** Chạy chương trình Combo cố định: "Cà phê + Bánh mì/Bánh bao" với một mã SKU riêng trên hệ thống POS. Việc này vừa giúp nhân viên thao tác nhanh (tăng tốc độ phục vụ >343 đơn/giờ), vừa đảm bảo khách hàng mua đúng cặp sản phẩm mang lại doanh thu cao cho cửa hàng.
+  
 **Page 3 - Store Performance & Benchmark**
+- **Overview**:  
+▪️Bức tranh tổng thể của 5 cửa hàng trọng điểm tại Khu Công nghệ cao cho thấy một sự ổn định rất cao với doanh thu trung bình mạng lưới đạt 58.79M/cửa hàng. Intel Products Vietnam đang tạm dẫn đầu cuộc đua với 61M, nhưng khoảng cách với cửa hàng đứng cuối (Hutech - 56M) là không quá lớn.  
+▪️Store Attach Rate (0.29) — tức trung bình mỗi khách chỉ mua khoảng 1.3 sản phẩm — đang là vấn đề chung mà chưa cửa hàng nào cũng đang gặp phải.
 
 ![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%203%20-%20Store%20Performance%20%26%20Benchmark.png)
 
-# 6. Job to be Done
+- **Tends**:  
+▪️Nhìn vào ma trận Store Health (AOV vs. Attach Rate), chúng ta thấy một sự phân hóa thú vị: OneHub Saigon đang là "ngôi sao" về hiệu quả với AOV cao nhất hệ thống (~85K) dù Attach Rate cũng chỉ tương đương các bên khác. Ngược lại, Viện Công nghệ cao Hutech đang nằm ở vùng đáy của đồ thị với AOV thấp nhất (~80K).    
+▪️Trong khi các cửa hàng nhà máy (Intel, Samsung) bắt đầu "nóng" từ 7:00 sáng, thì Hutech lại có cú bùng nổ muộn hơn vào khung 8:00 sáng (đạt 2.5%). Điều này phản ánh rõ nét sự khác biệt giữa giờ vào ca của kỹ sư và giờ lên lớp của sinh viên/giảng viên.  
+
+- **Deep-dive**:  
+▪️Dù hiệu suất phục vụ cực kỳ ấn tượng với 343 giao dịch/giờ, nhưng chỉ số Store Attach Rate (0.29) — tức là chưa tới 1.3 sản phẩm trên mỗi hóa đơn — chính là nguyên nhân trực tiếp khiến AOV sụt giảm dù lượng đơn hàng tăng mạnh.  
+▪️Sự phân hóa giữa các store rất rõ nét: trong khi OneHub Saigon đang tối ưu hóa giá trị đơn hàng rất tốt (AOV cao nhất hệ thống), thì Samsung SEHC dù có tỷ trọng bán hàng RTE dẫn đầu (5.4%) nhưng lại đang "bỏ quên" nhóm Coffee, dẫn đến việc Attach Rate không thể bứt phá.  
+
 
 ---
 # Tổng kết & Đánh giá  
