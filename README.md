@@ -1,1 +1,4 @@
-# B-o-c-o-Ph-n-t-ch-V-n-h-nh-Chu-i-b-n-l-
+# Retail Chain Operational Analysis Report  
+**Tên dự án**: Báo cáo Phân tích Vận hành Chuỗi bán lẻ  
+**Công cụ sử dụng**: Excel + MySQL + Power BI  
+**Người trình bày**: Võ Thị Thứ Phi
