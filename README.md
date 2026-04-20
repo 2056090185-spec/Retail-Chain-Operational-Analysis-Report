@@ -155,8 +155,10 @@ Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 ```
 ### 4.3. Kết quả Trực quan hóa
 **Page 1 - Overview**
-![description](C:\Users\FPTSHOP\Downloads\Convenience Store Operational Efficiency Report\Page 1 - Overview.png)  
+![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%201%20-%20Overview.png)
+
 **Page 2 - Basket & Operation Deep Dive**
+![description]
 **Page 3 - Store Performance & Benchmark**
 
 # 5. Key Insights & Recommendations
