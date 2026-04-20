@@ -57,6 +57,11 @@ Sử dụng Excel để tạo bộ dữ liệu ngẫu nhiên và phải đảm b
 - **Các hàm logic (IF, IFS)**: Thiết lập trọng số xác suất để ép dòng dữ liệu chạy theo kịch bản hành vi đã định trước.
   
 ## Giai đoạn 2 - Xử lý & Chuẩn hóa dữ liệu trên MySQL
+### 2.1. Ghi chú khám phá dữ liệu
+Phân tích sơ bộ (EDA) và chỉ ra các đặc tính (patterns) cốt lõi của bộ dữ liệu:
+- Tính chu kỳ: Lưu lượng giao dịch mang tính chu kỳ rõ rệt theo ngày, hình thành các "đỉnh" nghẽn cổ chai tại khung giờ sáng hoặc nghỉ trưa.
+- Đặc điểm giỏ hàng: Tỷ trọng giỏ hàng (Basket Size) chỉ chứa 1 sản phẩm chiếm hơn 71%, cho thấy dư địa rất lớn để triển khai các chiến dịch thúc đẩy bán chéo (Cross-sell/Upsell).
+- Phân bổ doanh thu: Phần lớn doanh thu tập trung vào nhóm thực phẩm chế biến sẵn (Ready-to-eat).
 ## Giai đoạn 3 - Thiết kế Layout
 ## Giai đoạn 4 - Trực quan hóa & DAX trên Power BI
 
