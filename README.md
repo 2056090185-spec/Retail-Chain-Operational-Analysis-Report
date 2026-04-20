@@ -95,6 +95,68 @@ GROUP BY product_1, product_2
 ORDER BY order_count DESC;
 ```
 ## Giai đoạn 3 - Thiết kế Layout
+### Cấu trúc 
+- **Trang 1 - Overview: Bao gồm các chỉ số Top-line (Total Revenue - Total Orders - Avg Order Value) và các chỉ số liên quan đến 
 ## Giai đoạn 4 - Trực quan hóa & DAX trên Power BI
+### 4.1. Tích hợp & Khởi tạo mô hình (Data Integration & Modeling)
+- Thiết lập kết nối luồng dữ liệu trực tiếp từ hệ quản trị MySQL vào Power BI.
+- Kiểm trả các mối quan hệ giữa các bảng Dimension và Fact.
+### 4.2. Xây dựng hệ thống chỉ số động (Dynamic DAX Measures)
+**1. Nhóm chỉ số Hiệu suất & Giỏ hàng (Efficiency & Basket Measures)**
+- **Average Order Value (AOV)**: Giá trị đơn hàng trung bình  
+```dax
+AOV = 
+AVERAGEX( 
+    VALUES('7_eleven fact_transaction'[transaction_id]), 
+    CALCULATE(SUM('7_eleven fact_transaction'[amount]))
+	)
+```
+- **Store Attach Rate**: Số lượng sản phẩm trung bình trên một hóa đơn
+```dax
+Store Attach Rate = 
+DIVIDE(
+    COUNTROWS(
+        FILTER(
+            VALUES('7_eleven fact_transaction'[transaction_id]),
+            CALCULATE(COUNTROWS('7_eleven fact_transaction')) > 1)),
+    DISTINCTCOUNT('7_eleven fact_transaction'[transaction_id])
+)
+```
+- **Sales per Square Meter (Sale/m2)**: Hiệu suất mặt bằng
+```dax
+Sale/m2 = divide([Total Revenue],sum('7_eleven dim_store'[floor_area_sqm]),0)
+``` 
+**2. Nhóm chỉ số Tối ưu Vận hành (Operation & Time Intelligence)**
+- **Transactions Per Hour (TPH)**: Tốc độ xử lý giao dịch tại các POS
+```dax
+Transaction Per Hour = 
+VAR TotalPeakOrders = CALCULATE(DISTINCTCOUNT('7_eleven fact_transaction'[transaction_id]), '7_eleven fact_transaction'[Is Peak Hour] = 1)
+VAR PeakHourCount = 4
+RETURN
+DIVIDE(TotalPeakOrders, PeakHourCount,0)
+```
+- **Peak Hour Contribution (%)**: Tỷ trọng doanh thu giờ cao điểm so với toàn thời gian
+```dax
+Peak Hour Sale % = 
+VAR TotalSales = [Total Revenue]
+VAR PeakSales = CALCULATE([Total Revenue],'7_eleven fact_transaction'[Is Peak Hour] = 1)
+RETURN
+DIVIDE(PeakSales,TotalSales,0)
+```
+**3. Nhóm chỉ số Quản trị Ngành hàng & Rủi ro (Category & Wastage)**
+- **Category Contribution (%)**: Tỷ trọng đóng góp của từng nhóm hàng (Food, Beverage, Snack)
+```dax
+Normalized % Avg Cate = 
+DIVIDE([Total Revenue],[AVG Category],0)
+```
+- **Wastage Rate (%)**: Tỷ lệ hàng hủy
+```dax
+Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
+```
+### 4.3. Kết quả Trực quan hóa
+**Page 1 - Overview**
+
+**Page 2 - Basket & Operation Deep Dive**
+**Page 3 - Store Performance & Benchmark**
 
 # 5. Key Insights & Recommendations
