@@ -203,7 +203,27 @@ Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 ▪️Dù hiệu suất phục vụ cực kỳ ấn tượng với 343 giao dịch/giờ, nhưng chỉ số Store Attach Rate (0.29) — tức là chưa tới 1.3 sản phẩm trên mỗi hóa đơn — chính là nguyên nhân trực tiếp khiến AOV sụt giảm dù lượng đơn hàng tăng mạnh.  
 ▪️Sự phân hóa giữa các store rất rõ nét: trong khi OneHub Saigon đang tối ưu hóa giá trị đơn hàng rất tốt (AOV cao nhất hệ thống), thì Samsung SEHC dù có tỷ trọng bán hàng RTE dẫn đầu (5.4%) nhưng lại đang "bỏ quên" nhóm Coffee, dẫn đến việc Attach Rate không thể bứt phá.  
 
+- **Action**: Lấy OneHub làm hình mẫu để đào tạo lại kỹ năng Cross-sell cho nhân sự tại Samsung và Hutech, đặc biệt là cách mời thêm đồ uống (Coffee/RTD Tea) đi kèm với đồ ăn nóng.
 
+# 6. Chiến lược hành động dựa trên dữ liệu
+## 1. Khung giờ nào cần tăng cường mật độ nhân viên?  
+- **Câu trả lời từ Dashboard**:  
+▪️Giờ cao điểm sáng (7:00 - 09:00): Đây là khung giờ chiếm 33.2% doanh thu. Đặc biệt, Page 2 chỉ ra mật độ giao dịch lên tới 343 đơn/giờ.    
+▪️Nút thắt ăn trưa (10:00 - 12:30): Page 1 và 2 xác nhận đây là điểm nghẽn (Bottleneck).  
+- **Hành động cụ thể**: Quản lý không cần tăng nhân sự cả ngày. Chỉ cần điều phối "Ca gãy" (Split shift) hoặc dồn 80% nhân sự vào đúng 2 khung giờ trên. Tại điểm nghẽn 12:00, cần ít nhất 1 nhân viên chuyên trách "đóng gói sẵn" các món RTE phổ biến để khách chỉ việc "cầm và thanh toán", giảm tối đa thời gian chờ tại quầy.
+
+## 2. Mặt hàng nào cần châm thêm (restock) trước 11:00 sáng?
+- **Câu trả lời từ Dashboard**: Page 1 (Top Products) và Page 2 (Heatmap) đã chỉ ra danh sách ưu tiên:  
+▪️Nhóm Ready-to-eat (RTE): Cơm nắm, Bánh bao nhân thịt, Sandwich trứng.  
+▪️Nhóm Instant Food: Mì ly hải sản, Xúc xích đức.  
+▪️Nguyên liệu pha chế: Sữa tươi Vinamilk (vì đây là món đi kèm "Top Combo" với Cà phê).  
+- **Hành động cụ thể**: Nhân viên kiểm kho phải hoàn tất việc châm hàng cho nhóm này chậm nhất là 10:45. Dữ liệu cho thấy sau 11:00 là biểu đồ doanh thu bắt đầu tăng, nếu đợi đến lúc đó mới châm hàng sẽ gây ra tình trạng "đứt hàng" (Out-of-stock) ngay lúc khách đông nhất.
+
+## 3. Sản phẩm nào thực sự hiệu quả để ưu tiên trưng bày?
+- **Câu trả lời từ Dashboard**: Nhìn vào Ma trận bổ trợ (Cross-sell) ở Page 2 và Tỷ trọng danh mục ở Page 3, cho thấy:  
+▪️Vị trí "Vàng" (ngang tầm mắt/quầy thu ngân): Dành cho Cà phê sữa đá và Bánh mì thịt nguội. Ma trận Cross-sell cho thấy 2 món này có lực kéo cực lớn (xác suất mua kèm >24%).  
+▪️Nhóm tiềm năng (Private Label): Dựa trên Page 1, nhóm RTE (thường là hàng nhãn riêng của 7-Eleven) đóng góp tới 69M. Cần ưu tiên diện tích kệ lớn hơn cho nhóm này vì nó vừa kéo traffic, vừa có biên lợi nhuận tốt.  
+- **Hành động cụ thể**: Tái cấu trúc lại Planogram (sơ đồ trưng bày). Loại bỏ bớt diện tích của các nhóm có hiệu suất thấp (như Confectionery - chỉ chiếm 3.3%) để nhường chỗ cho nhóm Instant Food (12.7%) và RTE.
 ---
 # Tổng kết & Đánh giá  
 ## Kinh nghiệm
