@@ -153,12 +153,17 @@ DIVIDE([Total Revenue],[AVG Category],0)
 ```dax
 Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 ```
-### 4.3. Kết quả Trực quan hóa
+### 4.3. Tổng quan Dashboard & Phân tích chi tiết
 **Page 1 - Overview**
+
 ![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%201%20-%20Overview.png)
 
 **Page 2 - Basket & Operation Deep Dive**
-![description]
+
+![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%202%20-%20Basket%20%26%20Operation%20Deep%20Dive.png) 
+
 **Page 3 - Store Performance & Benchmark**
+
+![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%203%20-%20Store%20Performance%20%26%20Benchmark.png)
 
 # 5. Key Insights & Recommendations
