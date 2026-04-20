@@ -94,14 +94,11 @@ WHERE a.product_id < b.product_id
 GROUP BY product_1, product_2
 ORDER BY order_count DESC;
 ```
-## Giai đoạn 3 - Thiết kế Layout
-### Cấu trúc 
-- **Trang 1 - Overview: Bao gồm các chỉ số Top-line (Total Revenue - Total Orders - Avg Order Value) và các chỉ số liên quan đến 
-## Giai đoạn 4 - Trực quan hóa & DAX trên Power BI
-### 4.1. Tích hợp & Khởi tạo mô hình (Data Integration & Modeling)
+## Giai đoạn 3 - Trực quan hóa & DAX trên Power BI
+### 3.1. Tích hợp & Khởi tạo mô hình (Data Integration & Modeling)
 - Thiết lập kết nối luồng dữ liệu trực tiếp từ hệ quản trị MySQL vào Power BI.
 - Kiểm trả các mối quan hệ giữa các bảng Dimension và Fact.
-### 4.2. Xây dựng hệ thống chỉ số động (Dynamic DAX Measures)
+### 3.2. Xây dựng hệ thống chỉ số động (Dynamic DAX Measures)
 **1. Nhóm chỉ số Hiệu suất & Giỏ hàng (Efficiency & Basket Measures)**
 - **Average Order Value (AOV)**: Giá trị đơn hàng trung bình  
 ```dax
@@ -153,10 +150,12 @@ DIVIDE([Total Revenue],[AVG Category],0)
 ```dax
 Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 ```
-### 4.3. Tổng quan Dashboard & Phân tích chi tiết
+### 3.3. Tổng quan Dashboard & Phân tích chi tiết
 **Page 1 - Overview**
 
 ![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%201%20-%20Overview.png)
+
+
 
 **Page 2 - Basket & Operation Deep Dive**
 
@@ -166,4 +165,9 @@ Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 
 ![description](https://github.com/2056090185-spec/Convenience-Store-Operational-Efficiency-Report-/blob/main/Convenience%20Store%20Operational%20Efficiency%20Report/Page%203%20-%20Store%20Performance%20%26%20Benchmark.png)
 
-# 5. Key Insights & Recommendations
+# 6. Job to be Done
+
+---
+# Tổng kết & Đánh giá  
+## Kinh nghiệm
+## Hạn chế
