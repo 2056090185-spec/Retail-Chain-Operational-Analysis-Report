@@ -71,6 +71,29 @@ Phân tích sơ bộ (EDA) và chỉ ra các đặc tính (patterns) cốt lõi 
 - RTE chiếm ~64% → core revenue driver nhưng phụ thuộc vận hành
 - Private Label ~42%
 - Cần ưu tiên shelf space + combo (RTE + beverage) để tối đa hóa doanh thu
+### 2.2. Thiết lập Data Warehouse & Xử lý truy vấn
+- **Khởi tạo Schema & Nạp dữ liệu (Data Ingestion)**: Khởi tạo cấu trúc các bảng Dim và Fact. Xử lý nạp dữ liệu từ file tĩnh vào hệ quản trị cơ sở dữ liệu.
+- **Thiết lập Mô hình dữ liệu (Data Modeling)**: Khai báo các Ràng buộc toàn vẹn (Integrity Constraints) thông qua Khóa chính (Primary Key) và Khóa ngoại (Foreign Key), thiết lập Relationship nối bảng Fact với các bảng Dim theo cấu trúc Star Schema.
+- **Khởi tạo Analytical Views**: Viết các truy vấn SQL để giải quyết trước các câu hỏi phân tích phức tạp, tối ưu hóa hiệu năng cho tầng Visualization. Dưới đây là đoạn script khởi tạo View chuyên biệt để bóc tách ma trận doanh thu của các tổ hợp sản phẩm (Top Combo):
+```sql
+CREATE VIEW vw_product_combo AS
+SELECT 
+	p1.product_name AS product_1,
+    p2.product_name AS product_2,
+    COUNT(DISTINCT a.transaction_id) AS order_count,
+    SUM(a.gross_amount - a.discount_amount
+		+ b.gross_amount - b.discount_amount) AS revenue
+FROM fact_transaction a
+JOIN fact_transaction b
+	ON a.transaction_id = b.transaction_id
+JOIN dim_product p1
+	ON a.product_id = p1.product_id
+JOIN dim_product p2
+	ON b.product_id = p2.product_id
+WHERE a.product_id < b.product_id
+GROUP BY product_1, product_2
+ORDER BY order_count DESC;
+```
 ## Giai đoạn 3 - Thiết kế Layout
 ## Giai đoạn 4 - Trực quan hóa & DAX trên Power BI
 
