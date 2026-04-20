@@ -59,9 +59,18 @@ Sử dụng Excel để tạo bộ dữ liệu ngẫu nhiên và phải đảm b
 ## Giai đoạn 2 - Xử lý & Chuẩn hóa dữ liệu trên MySQL
 ### 2.1. Ghi chú khám phá dữ liệu
 Phân tích sơ bộ (EDA) và chỉ ra các đặc tính (patterns) cốt lõi của bộ dữ liệu:
-- Tính chu kỳ: Lưu lượng giao dịch mang tính chu kỳ rõ rệt theo ngày, hình thành các "đỉnh" nghẽn cổ chai tại khung giờ sáng hoặc nghỉ trưa.
-- Đặc điểm giỏ hàng: Tỷ trọng giỏ hàng (Basket Size) chỉ chứa 1 sản phẩm chiếm hơn 71%, cho thấy dư địa rất lớn để triển khai các chiến dịch thúc đẩy bán chéo (Cross-sell/Upsell).
-- Phân bổ doanh thu: Phần lớn doanh thu tập trung vào nhóm thực phẩm chế biến sẵn (Ready-to-eat).
+#### [1] Peak Hour Optimization:
+- Doanh thu tập trung vào 7–9h & 10–11h -> hành vi mua “grab & go”
+- Cà phê là traffic driver kết hợp bánh mì/sandwich tạo combo chủ lực
+- Cần tối ưu vận hành (prep trước, staffing theo giờ) để tránh nghẽn  
+#### [2] Tốc độ bán (Morning vs Lunch):
+- Buổi sáng thiên về combo nhanh (cà phê + đồ ăn nhẹ)
+- Buổi trưa chuyển sang “quick meal” (mì ly, cơm) + nước ngọt đi kèm
+- Cần tối ưu layout (đặt gần nhau) và thiết bị (nước nóng, lò vi sóng); xúc xích/snack đóng vai trò cross-sell
+#### [3] Category Performance:
+- RTE chiếm ~64% → core revenue driver nhưng phụ thuộc vận hành
+- Private Label ~42%
+- Cần ưu tiên shelf space + combo (RTE + beverage) để tối đa hóa doanh thu
 ## Giai đoạn 3 - Thiết kế Layout
 ## Giai đoạn 4 - Trực quan hóa & DAX trên Power BI
 
