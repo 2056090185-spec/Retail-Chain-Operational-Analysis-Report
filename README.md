@@ -97,4 +97,4 @@ ORDER BY order_count DESC;
 ## Giai đoạn 3 - Thiết kế Layout
 ## Giai đoạn 4 - Trực quan hóa & DAX trên Power BI
 
-
+# 5. Key Insights & Recommendations
