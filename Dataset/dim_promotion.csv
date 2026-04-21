@@ -1,0 +1,11 @@
+promo_id,promo_name,promo_type,promo_subtype,discount_type,discount_value,min_purchase,start_date,end_date,start_time,end_time,applicable_category,applicable_sku,funding_type,partner_name,is_stackable
+PRM001,Morning Combo Banh Mi + Coffee,Combo,bundle,fixed_amount,5000,0,2025-01-01,2025-03-31,6:00,10:00,Food,NULL,store,NULL,FALSE
+PRM002,MoMo 10% Off,Payment,percentage,percentage,10,20000,2025-02-01,2025-02-28,NULL,NULL,All,NULL,partner,MoMo,TRUE
+PRM003,Buy 2 Get 1 Coca-Cola,BOGO,buy_x_get_y,fixed_amount,10000,0,2025-03-01,2025-04-15,NULL,NULL,Beverage,SKU_COKE_330,store,NULL,FALSE
+PRM004,Happy Hour Night 20%,Time-based,percentage,percentage,20,0,2025-01-01,2025-06-30,22:00,2:00,Ready-to-eat,NULL,store,NULL,TRUE
+PRM005,VNPay 15k Off,Payment,fixed,fixed_amount,15000,50000,2025-04-01,2025-04-30,NULL,NULL,All,NULL,partner,VNPay,TRUE
+PRM006,Snack Combo 3 items,Combo,bundle,fixed_amount,8000,0,2025-01-15,2025-06-30,14:00,18:00,Snack,NULL,store,NULL,FALSE
+PRM007,Coffee Buy 1 Get 1,BOGO,buy_x_get_y,fixed_amount,15000,0,2025-02-10,2025-02-25,7:00,11:00,Beverage,SKU_COFFEE,store,NULL,FALSE
+PRM008,Late Night 10% All Items,Time-based,percentage,percentage,10,0,2025-03-01,2025-12-31,23:00,5:00,All,NULL,store,NULL,TRUE
+PRM009,Student Discount 5%,Discount,percentage,percentage,5,0,2025-01-01,2025-12-31,NULL,NULL,All,NULL,store,NULL,TRUE
+PRM010,Combo Breakfast Premium,Combo,bundle,fixed_amount,7000,0,2025-01-01,2025-06-30,6:00,9:00,Food,NULL,store,NULL,FALSE

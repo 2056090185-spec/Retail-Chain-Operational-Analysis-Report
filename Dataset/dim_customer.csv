@@ -1,0 +1,5 @@
+customer_id,customer_type,occupation
+C000,guest,Transient
+C001,member,Office Worker
+C002,member,Student
+C003,member,Factory Worker

@@ -1,0 +1,21 @@
+product_id,product_name,unit_price,brand,industry,category,subcategory,product_type,pack_size,unit,price_segment,is_private_label,is_ready_to_eat,shelf_life_days,supplier
+P001,Banh Mi Thit Nguoi,22000,7-Eleven,Food,Ready-to-eat,Sandwich,Fresh,1,piece,Mid,TRUE,TRUE,1,Internal
+P002,Com Tam Suon,40000,7-Eleven,Food,Ready-to-eat,Rice Meal,Fresh,1,box,Mid,TRUE,TRUE,1,Internal
+P003,Xuc Xich Duc,18000,CP,Food,Hot Food,Sausage,Fresh,1,piece,Low,FALSE,TRUE,2,CP Vietnam
+P004,Coca-Cola 330ml,11000,Coca-Cola,Beverage,Soft Drink,Carbonated,Packaged,330,ml,Low,FALSE,FALSE,180,Coca-Cola VN
+P005,Pepsi 330ml,11000,Pepsi,Beverage,Soft Drink,Carbonated,Packaged,330,ml,Low,FALSE,FALSE,180,Suntory PepsiCo
+P006,Tra Sua Dong Chai,25000,7-Eleven,Beverage,RTD Tea,Milk Tea,Packaged,450,ml,Mid,TRUE,FALSE,30,Internal
+P007,Ca Phe Sua Da,22000,7-Eleven,Beverage,Coffee,Vietnamese Coffee,Fresh,1,cup,Mid,TRUE,TRUE,1,Internal
+P008,Snack Khoai Tay,15000,Lay’s,FMCG,Snack,Potato Chips,Packaged,52,g,Low,FALSE,FALSE,120,PepsiCo
+P009,Mi Ly Hai San,16000,Nissin,FMCG,Instant Food,Cup Noodles,Packaged,65,g,Low,FALSE,FALSE,180,Nissin VN
+P010,Chocolate Bar,18000,KitKat,FMCG,Confectionery,Chocolate,Packaged,45,g,Mid,FALSE,FALSE,180,Nestle
+P011,Nuoc Suoi,7000,Aquafina,Beverage,Water,Bottled Water,Packaged,500,ml,Low,FALSE,FALSE,365,PepsiCo
+P012,Banh Bao Nhan Thit,18000,7-Eleven,Food,Ready-to-eat,Bun,Fresh,1,piece,Low,TRUE,TRUE,1,Internal
+P013,Sandwich Trung,22000,7-Eleven,Food,Ready-to-eat,Sandwich,Fresh,1,piece,Low,TRUE,TRUE,1,Internal
+P014,Red Bull,16000,Red Bull,Beverage,Energy Drink,Energy,Packaged,250,ml,Mid,FALSE,FALSE,365,TCP VN
+P015,Tra Dao Dong Chai,12000,Tea+,Beverage,RTD Tea,Fruit Tea,Packaged,450,ml,Low,FALSE,FALSE,120,Suntory PepsiCo
+P016,Banh Croissant Bo,18000,7-Eleven,Food,Bakery,Pastry,Fresh,1,piece,Mid,TRUE,TRUE,1,Internal
+P017,Sua Tuoi Vinamilk,9000,Vinamilk,Beverage,Dairy,Milk,Packaged,180,ml,Low,FALSE,FALSE,90,Vinamilk
+P018,Yogurt Uong,24000,Yakult,Beverage,Dairy,Yogurt Drink,Packaged,65,ml,Low,FALSE,FALSE,30,Yakult VN
+P019,Bim Bim Poca,8000,Poca,FMCG,Snack,Potato Chips,Packaged,60,g,Low,FALSE,FALSE,120,PepsiCo
+P020,Mi Goi Hao Hao,5000,Acecook,FMCG,Instant Food,Pack Noodles,Packaged,75,g,Low,FALSE,FALSE,180,Acecook VN

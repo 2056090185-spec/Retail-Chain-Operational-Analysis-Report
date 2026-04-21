@@ -1,0 +1,6 @@
+store_id,store_name,location_type,floor_area_sqm,num_pos,staff_count_peak
+S01,F-Town 3 (FPT Software),Office Building,85,2,3
+S02,Vien Cong nghe cao Hutech,University,120,2,4
+S03,Samsung SEHC,Factory,60,1,2
+S04,OneHub Saigon,Office Park,100,2,3
+S05,Intel Products Vietnam,Factory,75,1,2
