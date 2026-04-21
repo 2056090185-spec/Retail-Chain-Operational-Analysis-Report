@@ -164,7 +164,7 @@ Wastage Rate = DIVIDE([Total Wastage],[Total Quantity])
 
 - **Action**:  
 **[1]** Đề xuất triển khai các gói Combo chiến lược (ví dụ: Cà phê + Bánh mì/Sandwich) tập trung vào khung giờ sáng để đẩy giá trị giỏ hàng lên mức mục tiêu 90K.    
-**[2]** Về mặt vận hành, quản lý khu vực cần điều phối lại ca làm việc, dồn 80% nguồn lực phục vụ vào "điểm nghẽn" 6:00 - 9:00 sáng và thực hiện công tác chuẩn bị hàng (Pre-prep) cho các món Best-seller trước giờ mở cửa cao điểm.    
+**[2]** Về mặt vận hành, quản lý khu vực cần điều phối lại ca làm việc, dồn 80% nguồn lực phục vụ vào khung giờ cao điểm 7:00 - 9:00 sáng và thực hiện công tác chuẩn bị hàng (Pre-prep) cho các món Best-seller trước giờ mở cửa cao điểm.    
 **[3]** Cần điều chỉnh lại thuật toán đặt hàng cho nhóm RTE vào giai đoạn tháng 4 và tháng 10 để giảm thiểu tỷ lệ Expired.    
 **[4]** Chạy chương trình "Happy Hour" cho nhóm hàng RTE sẽ để giải phóng tồn kho, vừa bảo vệ biên lợi nhuận, vừa giảm thiểu rác thải thực phẩm.  
   
